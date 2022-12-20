@@ -1,0 +1,1 @@
+# japanese-words-generator
