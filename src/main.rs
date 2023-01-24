@@ -1,3 +1,5 @@
+pub mod kana;
+
 fn main() {
-    println!("Hello, world!");
+    dbg!(kana::load_hiragana());
 }
