@@ -7,8 +7,7 @@ pub type Syllabary = Vec<Kana>;
 pub struct Kana {
     pub kana: String,
     pub romaji: String,
-    #[serde(rename = "type")]
-    pub type_field: String,
+    pub kana_type: String,
 }
 
 pub fn load_hiragana() -> Syllabary {

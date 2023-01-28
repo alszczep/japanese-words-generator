@@ -6,23 +6,25 @@ pub struct WordChance {
     pub lenght: u32,
 }
 
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize, Deserialize, Clone)]
 pub struct Config {
     pub kana_types: Vec<String>,
-    pub words_count: u32,
+    pub lines_count: u32,
     pub words_per_line: u32,
     pub word_chances: Vec<WordChance>,
+    pub no_spaces_in_kana: bool,
 }
 
 impl ::std::default::Default for Config {
     fn default() -> Self { Self { 
         kana_types: vec!["gojūon".to_string(), "dakuten".to_string(), "handakuten".to_string(), "yōon".to_string()], 
-        words_count: 50,
+        lines_count: 10,
         words_per_line: 5,
         word_chances: vec![
             WordChance { chance: 50, lenght: 4 },
             WordChance { chance: 50, lenght: 5 },
-        ]
+        ],
+        no_spaces_in_kana: false,
     }}
 }
 

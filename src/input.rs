@@ -15,7 +15,7 @@ pub fn ask_for_input() -> Input {
         let result = io::stdin().read_line(&mut input);
         match result {
             Ok(_) => {
-                if input != "1" && input != "2" {
+                if input.trim() == "1" || input.trim() == "2" {
                     break;
                 }
             },
@@ -25,7 +25,7 @@ pub fn ask_for_input() -> Input {
         println!("Incorrect input")
     }
     
-    if input == "1" {
+    if input.trim() == "1" {
         Input::Hirgana
     } else {
         Input::Katakana
