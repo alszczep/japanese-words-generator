@@ -3,7 +3,7 @@ use serde_derive::{Serialize, Deserialize};
 #[derive(Serialize, Deserialize, Copy, Clone)]
 pub struct WordChance {
     pub chance: u8,
-    pub lenght: u32,
+    pub length: u32,
 }
 
 #[derive(Serialize, Deserialize, Clone)]
@@ -17,12 +17,12 @@ pub struct Config {
 
 impl ::std::default::Default for Config {
     fn default() -> Self { Self { 
-        kana_types: vec!["gojūon".to_string(), "dakuten".to_string(), "handakuten".to_string(), "yōon".to_string()], 
+        kana_types: vec!["gojūon".to_string(), "dakuten".to_string(), "handakuten".to_string(), "yōon".to_string(), "extended1".to_string(), "extended2".to_string()], 
         lines_count: 10,
         words_per_line: 5,
         word_chances: vec![
-            WordChance { chance: 50, lenght: 4 },
-            WordChance { chance: 50, lenght: 5 },
+            WordChance { chance: 50, length: 4 },
+            WordChance { chance: 50, length: 5 },
         ],
         no_spaces_in_kana: false,
     }}

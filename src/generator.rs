@@ -61,7 +61,7 @@ fn generate_word(syllabary: Syllabary, cfg: Config) -> Vec<TranslatedStrings> {
     let mut current_chance_checked = 0;
     for word_chance in cfg.word_chances {
         if random_chance >= current_chance_checked && random_chance < current_chance_checked + word_chance.chance {
-            word_length = word_chance.lenght;
+            word_length = word_chance.length;
             break;
         }
 
