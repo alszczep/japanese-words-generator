@@ -4,6 +4,7 @@ Generator of fake Japanese words built with hiragana, katakana, and rōmaji.
 As words are not real, it is only useful in kana reading and writing training.
 Long vowels were skipped because these can be indeterminate when transforming to kana.
 Extended katakana is divided into two parts, first one consists of the most common characters.
+Some rōmaji have a `*` appended to them, to differentiate between duplicate transcriptions.
 
 ### Running
 
@@ -39,7 +40,7 @@ no_spaces_in_kana: false
 - `lines_count` - how many lines of text will be generated
 - `words_per_line` - how many words will be placed in each line
 - `word_chances` - a word with given `length` will be generated with `chance`, where chance is a value in percent, chances have to sum up to 100
-- `no_spaces_in_kana` - if true, then there will be no whitespace in between the words in each line, but only in kana output, romaji will have spaces regardless
+- `no_spaces_in_kana` - if true, then there will be no whitespace in between the words in each line, but only in kana output, rōmaji will have spaces regardless
 
 ### Output
 
